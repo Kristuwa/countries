@@ -10,6 +10,7 @@ export const CountryPage = () => {
   const { id } = useParams();
 
   const [country, setCountry] = useState(null);
+  console.log(country)
   useEffect(() => {
     const fetchCountry = async () => {
       setLoading(true);
@@ -36,7 +37,7 @@ export const CountryPage = () => {
         {loading && <Loader />}
         {!loading && country && (
           <div>
-            <CountryTitle>{country?.name}</CountryTitle>
+            <CountryTitle>{country?.name["common"]}</CountryTitle>
             <Image
               src={country?.flags["svg"]}
               alt="flag"

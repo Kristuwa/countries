@@ -44,7 +44,7 @@ export const Error = styled.p`
   text-align: center;
 `;
 
-export const CountryTitle = styled.h2`
+export const CountryTitle = styled.p`
   text-align: center;
   margin: 30px 0;
   font-size: 20px;
