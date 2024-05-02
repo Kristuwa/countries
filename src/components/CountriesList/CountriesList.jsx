@@ -6,7 +6,7 @@ export const CountriesList = ({ countries }) => {
     <List>
       {countries.map((country) => {
         const { name } = country;
-        const commonName = name.official;
+        const commonName = name.common;
         return <CountryItem key={commonName} country={commonName} />;
       })}
     </List>

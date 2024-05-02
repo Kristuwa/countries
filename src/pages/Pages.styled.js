@@ -12,6 +12,7 @@ export const Main = styled.main`
   background-repeat: repeat;
   background-size: 100%;
   background-position: 0 0;
+  min-height: 100vh;
 `;
 
 export const Container = styled.div`
@@ -33,4 +34,12 @@ export const Text = styled.p`
   font-size: 18px;
   text-align: center;
   margin-bottom: 15px;
+`;
+
+export const Error = styled.p`
+  font-size: 30px;
+  margin: 0 auto;
+  padding: 30px 0;
+  color: red;
+  text-align: center;
 `;
