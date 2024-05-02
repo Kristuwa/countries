@@ -18,7 +18,6 @@ export const Home = () => {
           "https://restcountries.com/v3.1/all"
         );
         const { data } = listOfCountries;
-        console.log(data);
         setCountries(data);
         setLoading(false);
       } catch (err) {

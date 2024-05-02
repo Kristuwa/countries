@@ -19,7 +19,6 @@ export const CountryPage = () => {
           `https://restcountries.com/v3.1/name/${nameCountry}`
         );
         setCountry(searchCountry.data[0]);
-        console.log(searchCountry.data[0]);
         setLoading(false);
       } catch (err) {
         toast.error("Error! Try again or go to Home page");
