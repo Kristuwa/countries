@@ -19,7 +19,7 @@ export const CountryPage = () => {
           `https://restcountries.com/v3.1/name/${nameCountry}`
         );
         setCountry(searchCountry.data[0]);
-		  console.log(searchCountry.data[0]);
+        console.log(searchCountry.data[0]);
         setLoading(false);
       } catch (err) {
         toast.error("Error! Try again or go to Home page");
@@ -30,20 +30,24 @@ export const CountryPage = () => {
     fetchCountry();
   }, [id]);
 
-
   return (
-	<Main>
-    <Container>
-      {loading && <Loader />}
-      {!loading && country && (
-        <div>
-          <p>{country?.name}</p>
-          <img src={country?.flags["svg"]} alt="flag" width={100} height={100} />
-			 <p>Capital: {country?.capital[0]}</p>
-        </div>
-      )}
-      {!loading && country === null && <Error>Not found any country</Error>}
-    </Container>
-</Main>
+    <Main>
+      <Container>
+        {loading && <Loader />}
+        {!loading && country && (
+          <div>
+            <p>{country?.name}</p>
+            <img
+              src={country?.flags["svg"]}
+              alt="flag"
+              width={100}
+              height={100}
+            />
+            <p>Capital: {country?.capital[0]}</p>
+          </div>
+        )}
+        {!loading && country === null && <Error>Not found any country</Error>}
+      </Container>
+    </Main>
   );
 };
