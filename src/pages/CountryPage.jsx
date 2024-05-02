@@ -18,6 +18,7 @@ export const CountryPage = () => {
         const searchCountry = await axios.get(
           `https://restcountries.com/v3.1/name/${nameCountry}`
         );
+		
         setCountry(searchCountry.data[0]);
         setLoading(false);
       } catch (err) {
