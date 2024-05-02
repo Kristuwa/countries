@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import { Loader } from "../components/Loader/Loader";
-import { Container, Error, Main } from "./Pages.styled";
+import { Container, CountryTitle, Error, Main, Image, CapitalText } from "./Pages.styled";
 
 export const CountryPage = () => {
   const [loading, setLoading] = useState(false);
@@ -35,14 +35,14 @@ export const CountryPage = () => {
         {loading && <Loader />}
         {!loading && country && (
           <div>
-            <p>{country?.name}</p>
-            <img
+            <CountryTitle>{country?.name}</CountryTitle>
+            <Image
               src={country?.flags["svg"]}
               alt="flag"
               width={100}
               height={100}
             />
-            <p>Capital: {country?.capital[0]}</p>
+            <CapitalText>Capital: {country?.capital[0]}</CapitalText>
           </div>
         )}
         {!loading && country === null && <Error>Not found any country</Error>}

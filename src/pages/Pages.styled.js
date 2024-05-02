@@ -43,3 +43,18 @@ export const Error = styled.p`
   color: red;
   text-align: center;
 `;
+
+export const CountryTitle = styled.h2`
+  text-align: center;
+  margin: 30px 0;
+  font-size: 20px;
+`;
+
+export const Image = styled.img`
+  width: 100px;
+  margin: 0 auto 30px;
+`;
+
+export const CapitalText = styled.p`
+  text-align: center;
+`;
