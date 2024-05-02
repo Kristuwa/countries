@@ -1,3 +1,6 @@
+import { useLocation } from "react-router-dom";
 export const CountryPage = ()=> {
-	return <div>CountryPage</div>
+	const location = useLocation();
+	const {pathname} = location;
+	return <div>{pathname}</div>
 }
